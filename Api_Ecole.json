@@ -1,0 +1,157 @@
+{
+  "info": {
+    "name": "API Gestion École",
+    "_postman_id": "ecole-1234",
+    "description": "Collection pour tester l'API FastAPI Gestion École",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Créer une classe",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/classes?nom=L3_INFO",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["classes"],
+          "query": [{"key": "nom", "value": "L3_INFO"}]
+        }
+      }
+    },
+    {
+      "name": "Liste des classes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8000/classes"
+      }
+    },
+    {
+      "name": "Détails d’une classe",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8000/classes/L3_INFO"
+      }
+    },
+    {
+      "name": "Ajouter un étudiant",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/classes/L3_INFO/students?id=1&nom_etu=Doe&prenom=John",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["classes", "L3_INFO", "students"],
+          "query": [
+            {"key": "id", "value": "1"},
+            {"key": "nom_etu", "value": "Doe"},
+            {"key": "prenom", "value": "John"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Liste étudiants d’une classe",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8000/classes/L3_INFO/students"
+      }
+    },
+    {
+      "name": "Rechercher un étudiant par ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8000/students/1"
+      }
+    },
+    {
+      "name": "Afficher infos étudiant",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8000/students/1/info"
+      }
+    },
+    {
+      "name": "Modifier étudiant",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/students/1?nom=Smith&prenom=Johnny",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["students", "1"],
+          "query": [
+            {"key": "nom", "value": "Smith"},
+            {"key": "prenom", "value": "Johnny"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ajouter note étudiant",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/students/1/notes?note=15",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["students", "1", "notes"],
+          "query": [{"key": "note", "value": "15"}]
+        }
+      }
+    },
+    {
+      "name": "Moyenne étudiant",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8000/students/1/average"
+      }
+    },
+    {
+      "name": "Moyenne classe",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8000/classes/L3_INFO/average"
+      }
+    },
+    {
+      "name": "Supprimer étudiant",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "http://127.0.0.1:8000/students/1"
+      }
+    },
+    {
+      "name": "Supprimer classe",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "http://127.0.0.1:8000/classes/L3_INFO"
+      }
+    },
+    {
+      "name": "Statistiques",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8000/stats"
+      }
+    }
+  ]
+}

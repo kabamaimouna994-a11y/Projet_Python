@@ -1,0 +1,10 @@
+# Environnement virtuel
+.venv/
+
+# Fichiers compilés Python
+__pycache__/
+*.pyc
+
+# Fichiers IDE
+.vscode/
+.idea/
