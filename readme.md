@@ -9,12 +9,4 @@ Ce projet est une API FastAPI pour gérer une école :
 - Statistiques globales
 
 Toutes les fonctionnalités sont disponibles via Postman 
----
-
-## Installation
-
-1. Cloner le dépôt :
-
-```bash
-git clone <URL_DE_TON_REPO>
-cd PythonProject2
+-
