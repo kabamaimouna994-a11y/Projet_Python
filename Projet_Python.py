@@ -132,8 +132,7 @@ def rechercher_etudiant(id: str):
 
 
 #  Afficher les informations d’un étudiant
-# (déjà couvert par /students/{id})
-# On peut ajouter une route explicite :
+
 
 @app.get("/students/{id}/info")
 def infos_etudiant(id: str):
