@@ -1,5 +1,5 @@
 # API Gestion École
-
+Etudiante : KABA Maïmouna
 ## Description
 
 Ce projet est une API FastAPI pour gérer une école :
